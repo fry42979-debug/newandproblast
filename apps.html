@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRRANGER | Apps</title>
+    <style>
+        :root {
+            --bg-color: #0f0f12;
+            --card-bg: rgba(26, 26, 36, 0.55);
+            --accent-color: #00a2ff; /* Neon Blue */
+            --text-color: #ffffff;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Same animated moving gradient background from home page adjusted to blue theme */
+            background: linear-gradient(-45deg, #0b0c10, #0f172a, #0b0c10, #002b4d);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Moving Background Animation */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Blue Top Notification Banner */
+        .top-banner {
+            background-color: var(--accent-color);
+            color: #000000;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 162, 255, 0.3);
+            position: relative;
+            z-index: 101;
+        }
+
+        /* Header / Navigation */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: rgba(26, 26, 36, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+        }
+
+        .brand h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        /* Game Card Styling */
+        .game-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 162, 255, 0.3);
+            border-color: var(--accent-color);
+        }
+
+        .game-icon-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background-color: #252533;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .game-category {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 80px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        LAST UNBLOCKED WEBSITE IM MAKING - ELiJAH F
+    </div>
+
+    <header>
+        <div class="brand">
+            <img src="6a1057763e692.webp" alt="MRRANGER Logo">
+            <h1>MRRANGER</h1>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="section-title">Popular Apps</h2>
+        
+        <div class="games-grid">
+            
+            <a href="baldis.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://play-lh.googleusercontent.com/EPV1TB4So1lB0DGrdCVExDpNU8ML67nd8OqBeoOIM-s6sDicxmDdPvCXD6n7LKevFl0" alt="Baldi's Basics Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Baldi's Basics</div>
+                    <div class="game-category">Horror / Indie</div>
+                </div>
+            </a>
+
+            <a href="geodash.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/785.png" alt="Geometry Dash Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Geometry Dash</div>
+                    <div class="game-category">Platformer / Indie</div>
+                </div>
+            </a>
+                    
+            <a href="Friday Night Funkin.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/8.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Friday Night Funkin</div>
+                    <div class="game-category">Music / Rap</div>
+                </div>
+            </a>
+            
+            <a href="Friday Night Funkin vs Shucks v2.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/836.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Friday Night Funkin - Shucks</div>
+                    <div class="game-category">Music / Rap</div>
+                </div>
+            </a>
+            
+            <a href="Basket Bros.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/285.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Basket Bros</div>
+                    <div class="game-category">Sports / Indie</div>
+                </div>
+            </a>
+            
+            <a href="Cuphead.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:420,cw:1080,ch:1080,q:80,w:1080/i6yoNS8R925bXaxk3F3vAX.jpg" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Cuphead</div>
+                    <div class="game-category">you should / make a deal with the devil</div>
+                </div>
+            </a>
+            
+            <a href="BitLife" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/70.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">BitLife</div>
+                    <div class="game-category">Famliy/RP</div>
+                </div>
+            </a>
+            
+            <a href="Five Nights at Freddy's.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/38.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Five Nights at Freddy's</div>
+                    <div class="game-category">Horror/Indie</div>
+                </div>
+            </a>
+            
+            <a href="Five Nights at Freddy's 2.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/39.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Five Nights at Freddy's 2</div>
+                    <div class="game-category">Horror/Indie</div>
+                </div>
+            </a>
+            
+            <a href="Five Nights at Freddy's 3.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/40.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Five Nights at Freddy's 3</div>
+                    <div class="game-category">Horror/Indie</div>
+                </div>
+            </a>
+            
+            <a href="Five Nights at Freddy's 4.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/41.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Five Nights at Freddy's 4</div>
+                    <div class="game-category">Horror/Indie</div>
+                </div>
+            </a>
+            
+            <a href="Block Blast.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/6.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Block Blast</div>
+                    <div class="game-category">blocks/Indie</div>
+                </div>
+            </a>
+            
+            <a href="CaseOh's Basics in Eating and Fast Food.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/758.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">CaseOh's Basics in Eating and Fast Food</div>
+                    <div class="game-category">horror/funny</div>
+                </div>
+            </a>
+            
+            <a href="Crazy Cattle 3D.html" class="game-card">
+                <div class="game-icon-wrapper">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/164.png" alt="Friday Night Funkin Icon">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Crazy Cattle 3D</div>
+                    <div class="game-category">AHHH/funny</div>
+                </div>
+            </a>
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 MRRANGER. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
