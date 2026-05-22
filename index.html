@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRRANGEr</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #66fcf1;
+            margin-top: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #66fcf1;
+            background-color: transparent;
+            border: 2px solid #66fcf1;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+            box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 0.9rem;
+            color: #45f3ff;
+            opacity: 0.7;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="6a1057763e692.webp" alt="MRRANGEr Logo" class="logo">
+            <h1>MRRANGEr</h1>
+        </header>
+
+        <nav class="nav-buttons">
+            <a href="#games" class="btn">Games</a>
+            <a href="#media" class="btn">Media</a>
+        </nav>
+
+        <footer>
+            <p>Created by Elijah f</p>
+        </footer>
+    </div>
+
+</body>
+</html>
