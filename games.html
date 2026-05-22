@@ -7,8 +7,8 @@
     <style>
         :root {
             --bg-color: #0f0f12;
-            --card-bg: #1a1a24;
-            --accent-color: #00a2ff; /* Updated to Neon Blue */
+            --card-bg: rgba(26, 26, 36, 0.55);
+            --accent-color: #00a2ff; /* Neon Blue */
             --text-color: #ffffff;
             --text-secondary: #94a3b8;
         }
@@ -21,9 +21,35 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
+            /* Same animated moving gradient background from home page adjusted to blue theme */
+            background: linear-gradient(-45deg, #0b0c10, #0f172a, #0b0c10, #002b4d);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
             color: var(--text-color);
             line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Moving Background Animation */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Blue Top Notification Banner */
+        .top-banner {
+            background-color: var(--accent-color);
+            color: #000000;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 162, 255, 0.3);
+            position: relative;
+            z-index: 101;
         }
 
         /* Header / Navigation */
@@ -32,8 +58,9 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 40px;
-            background-color: rgba(26, 26, 36, 0.8);
-            backdrop-filter: blur(10px);
+            background-color: rgba(26, 26, 36, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -99,19 +126,21 @@
         /* Game Card Styling */
         .game-card {
             background-color: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 16px;
             overflow: hidden;
             text-decoration: none;
             color: var(--text-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            border: 1px solid #2e2e3e;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .game-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0, 162, 255, 0.25); /* Updated shadow color to match blue theme */
+            box-shadow: 0 12px 25px rgba(0, 162, 255, 0.3);
             border-color: var(--accent-color);
         }
 
@@ -164,11 +193,15 @@
             margin-top: 80px;
             color: var(--text-secondary);
             font-size: 14px;
-            border-top: 1px solid #1a1a24;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
 <body>
+
+    <div class="top-banner">
+        LAST UNBLOCKED WEBSITE IM MAKING - ELiJAH F
+    </div>
 
     <header>
         <div class="brand">
@@ -190,25 +223,26 @@
                     <div class="game-title">Baldi's Basics</div>
                     <div class="game-category">Horror / Indie</div>
                 </div>
-                
-                <a href="geodash.html" class="game-card">
+            </a>
+
+            <a href="geodash.html" class="game-card">
                 <div class="game-icon-wrapper">
-                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/785.png" alt="Baldi's Basics Icon">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/785.png" alt="Geometry Dash Icon">
                 </div>
                 <div class="game-info">
                     <div class="game-title">Geometry Dash</div>
                     <div class="game-category">Platformer / Indie</div>
                 </div>
+            </a>
                     
-                    <a href="Friday Night Funkin.html" class="game-card">
+            <a href="Friday Night Funkin.html" class="game-card">
                 <div class="game-icon-wrapper">
-                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/8.png" alt="Baldi's Basics Icon">
+                    <img src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/8.png" alt="Friday Night Funkin Icon">
                 </div>
                 <div class="game-info">
                     <div class="game-title">Friday Night Funkin</div>
                     <div class="game-category">Music / Rap</div>
                 </div>
-                
             </a>
 
         </div>
